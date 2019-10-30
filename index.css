@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+
+:root {
+	--primary-color: #e50914;
+	--secondary-color: #e32d36;
+	--third-color: #f05d65;
+	scroll-behavior: smooth;
+	overflow: hidden;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Quicksand', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	background: #000;
+	color: #999;
+}
+
+ul {
+	list-style: none;
+}
+
+h1, 
+h2, 
+h3, 
+h4 {
+	color: #fff;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+}
+
+p {
+	margin: 0.5rem 0;
+}
+
+#logo-supreme {
+	width: 100%;
+}
+
+header {
+	width: 100%;
+	height: 93vh;
+	position: relative;
+}
+
+.bg-img {
+	height: 40vh;
+	display: flex;
+}
+
+.image-normal {
+	transition: 700ms;
+	opacity: 0.2;
+}
+
+.image-normal:hover {
+	opacity: 0.5;
+}
+
+#img {
+	width: 640px;
+}
+
+#img:hover {
+	width: 650px;
+}
+
+.text-middle {
+	text-align: center;
+	animation-name: middleText;
+	animation-duration: 5s;
+}
+
+.text-middle h1 {
+	color: #fff;
+	font-size: 50px;
+	
+}
+
+.text-middle span {
+	color: var(--primary-color);
+}
+
+#logoText {
+	width: 300px;
+}
+
+/* Ripple effect */
+.shopBtn {
+	background-position: center;
+	transition: background 0.8s;
+}
+.shopBtn:hover {
+	background: var(--secondary-color) radial-gradient(circle, transparent 1%, var(--secondary-color) 1%) center/15000%;
+}
+.shopBtn:active {
+	background-color: var(--third-color);
+	background-size: 100%;
+	transition: background 0s, transform 600ms;
+	transform: scale(.8);
+}
+  
+/* Button style */
+button {
+	border: none;
+	border-radius: 2px;
+	padding: 12px 18px;
+	font-size: 16px;
+	text-transform: uppercase;
+	cursor: pointer;
+	color: white;
+	background-color: var(--primary-color);
+	outline: none;
+	transition-duration: .6s;
+	transition-property: transform;
+	transition: transform .6s ease-out;  
+}
+
+.navBar-links {
+	position: relative;
+	height: 90px;
+	float: right;
+	top: 15px;
+	margin-right: 30px;
+}
+
+/* Logo Style */
+
+.navBar-logo {
+	width: 170px;
+	position: absolute;
+	float: left;
+	left: 10px;
+	top: 10px;
+}
+
+/* NavBar General */
+
+
+#navbar {
+	background-color: #fff;
+	width: 100%;
+	height: 90px;
+}
+
+@keyframes middleText {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+/* Shop Now Div */
+
+.shopNowDiv {
+	background-color: #fff;
+	padding-bottom: 20px;
+}
+
+#toggledForm {
+	padding: 10px;
+	border: 2px solid #e0e0e0;
+	width: 300px;
+	padding-bottom: 35px;
+	border-radius: 4px; 
+	background-color: #e0e0e0;
+	box-shadow: 2px 2px 10px #888888;
+}
+
+input {
+	width: 250px;
+	height: 30px;
+	border: none;
+	border-radius: 4px;
+	transition: 300ms;
+	text-align: center;
+}
+
+input:focus {
+	width: 265px;
+}
+
+input[type=submit] {
+	background-color: var(--primary-color);
+	color: #fff;
+	font-size: 18px;
+	margin-top: 20px;
+	font-weight: 500;
+	width: 120px;
+	text-align: center;
+	transition: 400ms;
+}
+
+input[type=submit]:hover {
+	box-shadow: 2px 2px 10px #888888;
+}
+
+#toggledForm p {
+	color: #fc0303;
+	font-weight: 600;
+	font-size: 24px;
+}

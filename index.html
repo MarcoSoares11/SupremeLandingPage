@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="index.css">
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
+  	</script>
+	<title>Supreme - Landing Page</title>
+</head>
+
+<body>
+	<header id="navbar">
+		<div class="navBar-links">
+			<ul>
+				<button class="shopBtn" href="#shopList">Shop Now</button>
+			</ul>
+		</div>
+		<div class="navBar-logo">
+			<img src="img/logo-supreme.png" alt="supreme-logo" id="logo-supreme">
+		</div>
+	</header>
+	<div class="shopNowDiv">
+		<center>
+			<form id="toggledForm">
+				<p>Name</p>
+				<input type="text" name="username" placeholder="Type in your name" class="nameOfUser" />
+				<br>
+				<br>
+				<p>E-mail</p>
+				<input type="email" name="userMail" placeholder="Type in your email" class="emailOfUser" />
+				<input type="submit" name="formSubmit" class="submitBtn" />
+			</form>
+		</center>
+	</div>
+	<main class="bg-img">
+		<div id="pic1">
+			<img src="img/pic1.jpg" alt="" class="image-normal" id="img">
+		</div>
+		<div id="pic2">
+			<img src="img/pic2.jpg" alt="" class="image-normal" id="img">
+		</div>
+		<div id="pic3">
+			<img src="img/pic3.jpg" alt="" class="image-normal" id="img">
+		</div>
+	</main>
+
+	<div class="text-middle">
+		<h1>
+			<img src="img/logo-supreme.png" alt="" id="logoText">
+			<br>
+			a world of possibilities
+		</h1>
+	</div>
+	<script type="text/javascript">
+		$(document).ready( () => {
+
+			// Variables
+			const $shopNow = $('.shopNowDiv');
+			const $shopNowBtn = $('.shopBtn');
+			const submitButton = $('.submitBtn');
+			const name = $('.nameOfUser');
+			const email = $('.emailOfUser');
+
+			// This div will start as hidden when the page loads
+			$shopNow.hide();
+
+			// When clicked on shop button, toggles div that was hidden
+			$($shopNowBtn).click(function () {
+				$($shopNow).fadeToggle();
+			});
+
+			// When user clicks submit button, this will validate the form
+			$(submitButton).click(function () {
+				if((email.value() == "") && (name.value() == "")) {
+					alert("It works!");
+				}
+			});
+
+		});
+	</script>
+
+</body>
+
+</html>
